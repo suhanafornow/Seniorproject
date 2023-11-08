@@ -36,3 +36,172 @@
     transform: rotate(360deg);
   }
 }
+
+/* Home Page CSS */
+#home-headwriting{
+text-align: center;
+margin-bottom: 200px;
+}
+
+#home-numbercircle1{
+  border-radius: 50%;
+  background-color:#282c34; 
+  height: 60px; 
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+#home-numbercircle2{
+  border-radius: 50%;
+  background-color:#282c34; 
+  height: 60px; 
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#home-numbercircle3{
+  border-radius: 50%;
+  background-color:#282c34; 
+  height: 60px; 
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#allsteps{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#home-step1{
+}
+
+#getstarted{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 180px;
+  padding: 15px 15px 15px 15px;
+  border-radius: 30%;
+}
+
+#image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("Images/home-background.jpeg");
+  height: 700px;
+  width: 1440px;
+  border: 1px solid black;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.homepara{
+  line-height: 10px;
+}
+
+ /* About us */
+#navbar{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+#navbar button{
+  height: 30px;
+  width: 65px;
+  border-radius: 12px;
+
+}
+
+#home-background{
+  padding-bottom: 200px;
+}
+
+.rightarrows{
+  height: 80px;
+  width: 80px;
+}
+
+#meet-the-team{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black;
+}
+
+#aboutus-image{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black ;
+}
+
+#difference{
+  text-align: center;
+  border: 1px solid black ;
+  padding-bottom: 150px;
+}
+
+#gsbutton{
+  border-radius: 12px;
+}
+
+#points{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pointbox{
+  width: 250px;
+}
+
+.pointicons{
+  width: 55px;
+  height: 55px;
+
+}
+ /*How it works*/
+
+.howtosteps{
+  width: 400px;
+
+}
+
+.stepimages{
+  width:50px;
+  height:50px;
+ 
+}
+
+#firststudentstep{
+  padding-top: 100px;
+  margin-left: 900px;
+}
+#secondstudentstep{
+  padding-top: 100px;
+  margin-left: 900px;
+}
+#thirdstudentstep{
+  padding-top: 100px;
+  margin-left: 900px;
+}
+/* Newsletter styling */
+#response{
+  width: 200px;
+  height: 75px;
+}
