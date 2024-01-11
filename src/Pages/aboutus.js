@@ -6,6 +6,7 @@ function aboutus(){
         <div id="aboutus-background">
             <div id="aboutus-image">
                 <h1> INTRODUCING US!</h1>
+                <p> Our goals at MentorMe touch upon a wide variety of categories. We aim to reduce the feeling of isolation that is unforutuanly </p>
             </div>
             <div id="meet-the-team">
                 <h1> Meet the Team!</h1>

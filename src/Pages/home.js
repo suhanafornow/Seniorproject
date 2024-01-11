@@ -4,55 +4,35 @@ import '../App.css';
 
 function home() {
     return (
-        <div>
+    
+
             <div id="home-background">
                 <div id="image">
-                    <h1> Connect with another generation</h1>
-                    <p class="homepara"> Private one-on-one sessions with high school students. </p>
-                    <p class="homepara"> Meet online or in person. Establish long lasting connections.</p>
+                   
 
                 </div>
+                <p class="homepara"> Private one-on-one sessions with high school students. </p>
+                <p class="homepara"> Meet online or in person. Establish long lasting connections.</p>
 
            
 
-                    <div id="home-headwriting">
+                <div id="home-headwriting">
 
                 <h2>
                     Making friends is easier than you think!
                 </h2>
             </div>
-            <div id="allsteps">
-            <div id="home-step1">
-                <div id="home-numbercircle1">
-                    1
-                </div>
-                <p>
-                    Create an account
-                </p>
+            <div class= "reviews"> 
+            <p> I had such a great time meeting with my high school volunteer! We played lots of games and I learned how to check my email!</p>
             </div>
-            <img src={require("../Images/right-arrow.png")} alt="rightarrow1" class="rightarrows" />
-            <div id="home-step2">
-                <div id="home-numbercircle2">
-                    2
-                </div>
-                <p>
-                   Start video searching!
-                </p>
-            </div>
-            <img src={require("../Images/right-arrow.png")} alt="rightarrow1" class="rightarrows" />
-            <div id="home-step3">
-                <div id="home-numbercircle3">
-                    3
-                </div>
-                <p>
-                    Get talking!
-                </p>
-            </div>
+            <br/>
+            <div class= "reviews"> 
+            <p> MentorMe has made me learn a lot about older life in NYC and i've recieved great advice from my senior buddy!</p>
             </div>
             <button id="getstarted"> Get Started!</button>
 
             </div>
-        </div>
+  
     )
 }
 

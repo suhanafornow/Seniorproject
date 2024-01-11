@@ -1,22 +1,40 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import '../App.css';
+import { useContext } from "react";
+import { getAuth, signOut } from "firebase/auth";
+import { UserContext } from "../Context/usercontext";
 
-function navbar(){
+
+function Navbar(){
+    const {setUser} = useContext(UserContext)
+    const auth = getAuth();
+    async function logout(){
+        signOut(auth).then(() => {
+            setUser(null)
+            // Sign-out successful.
+         }).catch((error) => {
+           // An error happened.
+         });
+    }
+    
     return( 
         <div id="navbar">
 
-    
-    <h1> Connoir</h1>
-    <h4> Find a Mate</h4>
-    <h4> How it works</h4>
-    <h4> About Us</h4>
-    <h4> Newsletter </h4>
-    <button id="login"> Log in</button>
-    <button id="signupB"> Sign Up</button>
+
+    <Link to="/" class="navbarlink"><h1 > MentorMe</h1></Link>
+    <Link to="howitworks" class="navbarlink"> <h4>  How it works</h4></Link>
+    <Link to="aboutus" class="navbarlink"><h4> About Us</h4></Link>
+    <Link to="/newsletter" class="navbarlink"><h4 > Newsletter </h4></Link>
+    <Link to="login"><button id="login"> Log in</button></Link>
+   <Link to="signup"> <button id="signupB"> Sign Up</button></Link>
+   <button onClick={logout}> Log Out </button>
+  
+
     </div>
     )
 
 
 }
 
-export default navbar
+export default Navbar

@@ -37,48 +37,33 @@
   }
 }
 
+
 /* Home Page CSS */
+#navbar h1{
+  color: white;
+  text-decoration: none!important;
+
+}
+#navbar h4 {
+  color: white;
+
+}
+#navbar{
+  background-color: crimson;
+  text-decoration: none;
+
+}
+
+.navbarlink{
+  text-decoration: none;
+}
+
+#home-background{
+background-color: crimson;
+}
 #home-headwriting{
 text-align: center;
-margin-bottom: 200px;
-}
-
-#home-numbercircle1{
-  border-radius: 50%;
-  background-color:#282c34; 
-  height: 60px; 
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-#home-numbercircle2{
-  border-radius: 50%;
-  background-color:#282c34; 
-  height: 60px; 
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-#home-numbercircle3{
-  border-radius: 50%;
-  background-color:#282c34; 
-  height: 60px; 
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-
+margin-bottom: 70px;
 }
 
 #allsteps{
@@ -86,16 +71,15 @@ margin-bottom: 200px;
   justify-content: space-evenly;
 }
 
-#home-step1{
-}
-
 #getstarted{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 180px;
+  margin-top: 70px;
   padding: 15px 15px 15px 15px;
-  border-radius: 30%;
+  border-radius: 10%;
+  background-color:lightpink;
+  font-size: large;
 }
 
 #image{
@@ -112,6 +96,29 @@ margin-bottom: 200px;
 .homepara{
   line-height: 10px;
 }
+
+.reviews{
+
+  border: 1px solid black;
+  color: white;
+  background-color: darkred;
+  margin-right: 650px;
+  margin-left: 50px;
+  font-style: italic;
+  font-size: large;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
  /* About us */
 #navbar{
@@ -159,6 +166,7 @@ margin-bottom: 200px;
 
 #gsbutton{
   border-radius: 12px;
+  background-color:lightpink
 }
 
 #points{
@@ -177,6 +185,10 @@ margin-bottom: 200px;
 }
  /*How it works*/
 
+ #howitworkss{
+  background-color: lightpink;
+ }
+
 .howtosteps{
   width: 400px;
 
@@ -185,23 +197,87 @@ margin-bottom: 200px;
 .stepimages{
   width:50px;
   height:50px;
+  margin-left: 900px;
  
 }
 
 #firststudentstep{
-  padding-top: 100px;
+  padding-top: 1px;
   margin-left: 900px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+  border: 4px dotted black;
+ 
 }
 #secondstudentstep{
-  padding-top: 100px;
+  padding-top: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: 900px;
+  margin-right: 50px;
+  border: 4px dotted black;
 }
 #thirdstudentstep{
-  padding-top: 100px;
+  padding-top: 1px;
   margin-left: 900px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+  border: 4px dotted black;
 }
 /* Newsletter styling */
 #response{
   width: 200px;
   height: 75px;
+}
+
+#blogform{
+  
+  border: 1px solid black;
+
+  text-align: center;
+}
+
+
+
+/* Login page */ 
+
+#login{
+  background-color: lightpink;
+
+}
+#signupB{
+  background-color: lightpink;
+}
+#loginboxes{
+  width: 50%;
+  border: 1px solid black;
+  text-align: center;
+  background-color: lightpink;
+
+}
+#loginimage{
+  width: 50%;
+  background-image: url("Images/login.jpeg");
+  background-size: cover;
+
+  
+
+}
+#loginimagee{
+  height:705px;
+}
+#second{
+  margin-top: 34%;
+  margin-bottom: 34%;
+}
+
+#loginpage{
+  display: flex;
+  align-items: center;
+  
+  border: 1px solid black;
+
+
 }
