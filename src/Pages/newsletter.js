@@ -1,6 +1,7 @@
 import React from "react";
 import '../App.css';
 import Blog from "../Components/blog";
+import Grid from "../Components/grid";
 import {db} from "../firebaseconfig";
 import { collection, doc, setDoc, addDoc } from "firebase/firestore"; 
 import { useState } from "react";
@@ -31,8 +32,8 @@ function Newsletter(id){
 
  return (
     <div id="blogform">
+    <Grid one = {<Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>} />
     <h1> Question Responses! </h1>  
-        <Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler" />
         
         <form>
         <h4> Enter your name:</h4>    
@@ -49,6 +50,10 @@ function Newsletter(id){
         
 
         </form>
+    <div id="answerboxes">
+        
+
+    </div>
         
 
         

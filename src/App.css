@@ -233,11 +233,48 @@ margin-bottom: 70px;
 }
 
 #blogform{
-  
-  border: 1px solid black;
-
   text-align: center;
 }
+
+#blogresponsepage{
+  border: 1px solid black;
+
+
+}
+/* Blog stylinf*/
+#responsetitle{
+border: 1px solid black;
+font-size: 12px;
+}
+#nameandtime{
+  border: 1px solid black;
+  font-size: 10px;
+  text-align: right;
+  padding-right: 2px;
+
+
+}
+#bywho{
+  border: 1px solid black;
+  font-size: 10px;
+  text-align: right;
+  padding-right: 2px;
+}
+#response2{
+  border: 1px solid black;
+
+}
+
+table{
+  width: 100%;
+  
+}
+td{
+  width: 33%;
+  border: 1px solid black;
+  justify-content: center;
+}
+
 
 
 
@@ -281,3 +318,49 @@ margin-bottom: 70px;
 
 
 }
+
+/* User profile*/
+#userinfo{
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.namebox{
+  display: flex;
+  
+}
+
+.namebox h2{
+  border: 1px solid black;
+  
+}
+
+#hourslog{
+  visibility: hidden;
+}
+
+table{
+  display: table;
+  border-collapse:collapse;
+  border:1px solid #FF0000;
+  
+}
+  
+th{
+  width: 33%;
+  border:1px solid black;
+  
+}
+
+/* tr{
+  width: 100%;
+  border:1px solid #FF0000;
+  
+}  */
+
+td{
+  text-align: center;
+  width: 33%;
+  border: 1px solid black;
+} 

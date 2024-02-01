@@ -11,9 +11,7 @@ function blog(props){
     <p id="blogresponse">
         {props.response}
     </p>
-    </div>
-
-
+</div>
     )
 }
 
@@ -24,4 +22,4 @@ function blog(props){
 
 
 
-export default blog
+export default blog;
