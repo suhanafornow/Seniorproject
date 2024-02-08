@@ -121,6 +121,10 @@ margin-bottom: 70px;
 
 
  /* About us */
+
+#aboutus-background{
+  background-color: lightpink;
+}
 #navbar{
   display: flex;
   justify-content: space-evenly;
@@ -234,6 +238,7 @@ margin-bottom: 70px;
 
 #blogform{
   text-align: center;
+  background-color: lightpink;
 }
 
 #blogresponsepage{

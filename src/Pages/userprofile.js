@@ -4,6 +4,8 @@ import {db} from "../firebaseconfig"
 import {UserContext } from "../Context/usercontext";
 import { useContext } from "react";
 import '../App.css';
+import DigitalSambaEmbedded from '@digitalsamba/embedded-sdk';
+
 
 
 function Userprofile(){
@@ -33,10 +35,22 @@ function showLog() {
 
     }
 }
+
+//SDK will create a frame as a child of the body tag and load the room url
+const roomUrl = 'https://mentormeglobal.digitalsamba.com/demo-room';
+const sambaFrame = DigitalSambaEmbedded.createControl({ url: roomUrl });
+//SDK will put a 5px solid red border around the iframe
+const instanceProps = { 
+    frameAttributes: {style: "border: 10px solid red; width: 100%; height: 500px"}, 
+    reportErrors: true 
+ };
+ sambaFrame.load(instanceProps);
+
+
     return(
+       
     <div id="userinfo">
     <h1> Profile Setting </h1>
-     
     <div class="namebox">
     <h3> Name: </h3>
     <h2> </h2>
