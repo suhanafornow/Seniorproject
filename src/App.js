@@ -6,6 +6,7 @@ import Howitworks from "./Pages/howitworks"
 import Newsletter from "./Pages/newsletter"
 import Navbar from "./Components/navbar"
 import Signup from "./Pages/signup"
+import Startmeeting from './Pages/startmeeting';
 import Login from "./Pages/login"
 import Userprofile from "./Pages/userprofile"
 import { UserContext } from './Context/usercontext';
@@ -25,6 +26,7 @@ function App() {
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/userprofile" element = {<Userprofile/>}/>
+      <Route path= "/startmeeting" element = {<Startmeeting/>}/>
 
 
 

@@ -58,6 +58,7 @@ function OutNavbar(){
 }
 
 function LogNavbar(){
+    
     const {setUser} = useContext(UserContext)
     const auth = getAuth();
     async function logout(){
@@ -74,7 +75,10 @@ function LogNavbar(){
         <Link to="howitworks" class="navbarlink"> <h4>  How it works</h4></Link>
         <Link to="aboutus" class="navbarlink"><h4> About Us</h4></Link>
         <Link to="/newsletter" class="navbarlink"><h4 > Newsletter </h4></Link>
-        <Link to="/userprofile" class="navbarlink"><h4> User Profile</h4></Link>
+        <Link to="/userprofile" class="navbarlink"><h4> User Profile</h4></Link> 
+        <Link to="/startmeeting" class="navbarlink"><h4> Start Meeting</h4></Link>
+
+
      
        <button onClick={logout}> Log Out </button>
       
