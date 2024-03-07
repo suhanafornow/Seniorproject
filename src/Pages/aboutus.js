@@ -31,7 +31,6 @@ function aboutus(){
                     </div>
 
                 </div> 
-                <button id="gsbutton" > Get Started! </button>
                 
             </div>
         </div>

@@ -2,26 +2,34 @@ import React from "react";
 import { doc, getDoc } from "firebase/firestore";
 import {db} from "../firebaseconfig"
 import {UserContext } from "../Context/usercontext";
-import { useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import '../App.css';
 
 
 
 function Userprofile(){
-    async function Store(){
-    const { user } = await useContext(UserContext);
+    const { user } = useContext(UserContext);
     console.log(user)
+    const [inputs, setInputs] = useState({});
+
+    async function Store(){
+
+    console.log(user.uid)
     const docRef = doc(db, "Volunteers", user.uid);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
         console.log("Document data:", docSnap.data());
+        setInputs (docSnap.data());
+        console.log(inputs);
     } 
     else {
   // docSnap.data() will be undefined in this case
   console.log("No such document!");
 }
 }
-// Store()
+useEffect(()=> {
+    Store() 
+},[])
 
 function showLog() {
     let hidden = document.getElementById("hourslog").style.visibility
@@ -42,32 +50,33 @@ function showLog() {
     <div id="userinfo">
     <h1> Profile Setting </h1>
     <div class="namebox">
-    <h3> Name: </h3>
+    <h3> Name: {inputs.name}  </h3>
     <h2> </h2>
     </div>
 
     <div class="namebox">
-    <h3> Email: </h3>
+    <h3> Email: {inputs.email} </h3>
+
     <h2> </h2>
     </div>
 
     <div class="namebox">
-    <h3> Grade: </h3>
+    <h3> Grade: <span class= "boxS">{inputs.grade}</span>  </h3>
     <h2> </h2>
     </div>
 
     <div class="namebox">
-    <h3> School: </h3>
+    <h3> School: <span class= "boxS">{inputs.school}</span> </h3>
     <h2> </h2>
     </div>
 
     <div class="namebox">
-    <h3> Region: </h3>
+    <h3> Region: <span class= "boxS">{inputs.region}</span>  </h3>
     <h2> </h2>
     </div>
 
     <div class="namebox">
-    <h3> Volunteer Hours: </h3>
+    <h3> Volunteer Hours: <span class= "boxS">{inputs.hours}</span>  </h3>
     <h2> </h2>
     </div>
 

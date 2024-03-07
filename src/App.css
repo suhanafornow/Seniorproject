@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+
+}
+*{
+  font-family:'Times New Roman', Times, serif;
 }
 
 .App-logo {
@@ -39,6 +43,10 @@
 
 
 /* Home Page CSS */
+#logout2{
+  background-color: lightpink;
+  border: none;
+}
 #navbar h1{
   color: white;
   text-decoration: none!important;
@@ -88,7 +96,6 @@ margin-bottom: 70px;
   background-image: url("Images/home-background.jpeg");
   height: 700px;
   width: 1440px;
-  border: 1px solid black;
   padding-top: 100px;
   text-align: center;
 }
@@ -152,7 +159,6 @@ margin-bottom: 70px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid black;
 }
 
 #aboutus-image{
@@ -189,28 +195,28 @@ margin-bottom: 70px;
 }
  /*How it works*/
 
- #howitworkss{
-  background-color: lightpink;
+ #part1{
+  width: 50%;
  }
 
-.howtosteps{
-  width: 400px;
+ #howitworkss{
+  background-color: lightpink;
+  display: flex;
+  height: 90vh;
+ }
 
-}
 
 .stepimages{
   width:50px;
   height:50px;
-  margin-left: 900px;
+  /* margin-left: 900px; */
  
 }
 
 #firststudentstep{
   padding-top: 1px;
-  margin-left: 900px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-right: 50px;
   border: 4px dotted black;
  
 }
@@ -218,18 +224,46 @@ margin-bottom: 70px;
   padding-top: 1px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: 900px;
-  margin-right: 50px;
   border: 4px dotted black;
 }
 #thirdstudentstep{
   padding-top: 1px;
-  margin-left: 900px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-right: 50px;
   border: 4px dotted black;
 }
+
+#hiwSteps{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items:start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  gap: 15%;
+}
+
+#allone{
+  display: flex;
+  gap: 10px;
+}
+
+#alltwo{
+  display: flex;
+  gap: 10px;
+
+}
+
+#allthree{
+  display: flex;
+  gap: 10px;
+
+}
+
+
 /* Newsletter styling */
 #response{
   width: 200px;
@@ -239,6 +273,9 @@ margin-bottom: 70px;
 #blogform{
   text-align: center;
   background-color: lightpink;
+  height: 90vh;
+
+
 }
 
 #blogresponsepage{
@@ -287,14 +324,16 @@ td{
 
 #login{
   background-color: lightpink;
+  border: none;
 
 }
 #signupB{
   background-color: lightpink;
+  border: none;
+
 }
 #loginboxes{
   width: 50%;
-  border: 1px solid black;
   text-align: center;
   background-color: lightpink;
 
@@ -318,27 +357,26 @@ td{
 #loginpage{
   display: flex;
   align-items: center;
-  
-  border: 1px solid black;
 
 
 }
 
 /* User profile*/
 #userinfo{
-  border: 1px solid black;
   padding-left: 20px;
   padding-bottom: 20px;
 }
 
-.namebox{
-  display: flex;
-  
-}
+/*  */
 
-.namebox h2{
+/* .namebox h2{
   border: 1px solid black;
   
+} */
+
+.boxS{
+  border: 1px solid green; 
+
 }
 
 #hourslog{

@@ -11,6 +11,7 @@ import Login from "./Pages/login"
 import Userprofile from "./Pages/userprofile"
 import { UserContext } from './Context/usercontext';
 import { useState } from 'react';
+import Protect from './Context/protected';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -26,7 +27,7 @@ function App() {
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/userprofile" element = {<Userprofile/>}/>
-      <Route path= "/startmeeting" element = {<Startmeeting/>}/>
+      <Route path= "/startmeeting" element = {<Protect> <Startmeeting/></Protect>}/>
 
 
 
