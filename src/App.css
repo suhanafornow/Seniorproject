@@ -277,8 +277,16 @@ margin-bottom: 70px;
 
 
 }
+.blogpost{
+  display: flex;
+  width: 100%;
+  border: 1px solid yellow;
+  justify-content: center;
+  
+}
 
 #blogresponsepage{
+  width: 33%;3
   border: 1px solid black;
 
 

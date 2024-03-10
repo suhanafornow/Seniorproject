@@ -3,6 +3,7 @@ import '../App.css';
 import { useState, useContext } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../firebaseconfig";
+import { useNavigate } from "react-router-dom";
 import {UserContext } from "../Context/usercontext";
 import {db} from "../firebaseconfig";
 import { doc, setDoc } from "firebase/firestore"; 
@@ -23,7 +24,8 @@ function Signup(){
         
           });
     }
-    const {setUser} = useContext(UserContext)
+    const {user, setUser} = useContext(UserContext)
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({})
     const handlechange = (event)=> {
         const name = event.target.name
@@ -53,6 +55,9 @@ function Signup(){
     alert("Please make sure your password and/or email is valid.")
   });
 }
+if (user){
+    navigate("/")
+  }
     return (
         <div id="loginpage">
            

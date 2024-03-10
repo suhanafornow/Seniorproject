@@ -1,12 +1,14 @@
 import React from "react";
 import '../App.css';
-import { useState, useContext } from "react";
+import { useState, useContext} from "react";
+import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { UserContext } from "../Context/usercontext";
 
 
 function Login(){
     const {user, setUser} = useContext(UserContext)
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const handlechange = (event)=> {
         const name = event.target.name
@@ -24,8 +26,8 @@ function Login(){
             setUser(userr)
             console.log(user);
             // ...
-  }
-  )
+  },
+)
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -34,6 +36,9 @@ function Login(){
     alert("Please make sure your password and/or email is correct.")
   });
     }
+    if (user){
+        navigate("/")
+      }
     return (
 
         <div id="loginpage">

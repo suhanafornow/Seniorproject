@@ -3,8 +3,8 @@ import '../App.css';
 import Blog from "../Components/blog";
 import Grid from "../Components/grid";
 import {db} from "../firebaseconfig";
-import { collection, doc, setDoc, addDoc } from "firebase/firestore"; 
-import { useState } from "react";
+import { collection, doc, setDoc, addDoc, getDocs } from "firebase/firestore"; 
+import { useEffect, useState } from "react";
 
 function Newsletter(id){
     async function responses(){
@@ -12,7 +12,24 @@ function Newsletter(id){
            
             
     )
+
     }
+    const [posts, setPosts] = useState([])
+    
+    useEffect(()=> {
+        async function getPosts(){
+            const entries = collection(db, "Writer");
+            const randVar = await getDocs(entries);
+            const filteredData = randVar.docs.map((doc) => ({
+                doc, ...doc.data()
+              }));
+            setPosts(filteredData)
+            
+        }
+        getPosts();
+
+    },[])
+    console.log(posts)
        
        
     
@@ -32,6 +49,16 @@ function Newsletter(id){
 
  return (
     <div id="blogform">
+        <div>
+            <div class="blogpost">
+                {
+                    posts.map((post)=>(
+                        <Blog title={post.title} author={post.question} timestamp={post.timestamp} response={post.answers}/>
+                    ))
+                }
+               
+            </div>
+        </div>
     <Grid one = {<Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>} />
     <h1> Question Responses! </h1>  
         
