@@ -273,31 +273,46 @@ margin-bottom: 70px;
 #blogform{
   text-align: center;
   background-color: lightpink;
-  height: 90vh;
+  height: 100vh;
+
 
 
 }
 .blogpost{
   display: flex;
   width: 100%;
-  border: 1px solid yellow;
   justify-content: center;
   
 }
 
 #blogresponsepage{
-  width: 33%;3
+  width: 33%;
   border: 1px solid black;
 
 
 }
+#blogresponse{
+  border: 1px solid black;
+  margin-right:10%;
+  margin-left:10%;
+}
 /* Blog stylinf*/
+
+#author{
+  text-align: right;
+  font-size: small;
+  padding-right: 5px;
+
+}
+#timestamp{
+  text-align: right;
+  font-size: small;
+  padding-right: 5px;
+}
 #responsetitle{
-border: 1px solid black;
 font-size: 12px;
 }
 #nameandtime{
-  border: 1px solid black;
   font-size: 10px;
   text-align: right;
   padding-right: 2px;
@@ -305,15 +320,11 @@ font-size: 12px;
 
 }
 #bywho{
-  border: 1px solid black;
   font-size: 10px;
   text-align: right;
   padding-right: 2px;
 }
-#response2{
-  border: 1px solid black;
 
-}
 
 table{
   width: 100%;
@@ -321,10 +332,46 @@ table{
 }
 td{
   width: 33%;
-  border: 1px solid black;
   justify-content: center;
 }
 
+#newsButton{
+  font-size: larger;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px ;
+  border-radius: 10px;
+  border: none;
+
+
+
+  background-color: #5974b7;
+
+}
+
+.newsInput{
+border-radius: 5px;
+min-width: 40% ;
+border: none;
+
+}
+#aroundInput{
+  border: 1px solid red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+/* #formInput{
+  border: 1px solid red;
+} */
+#secInput{
+  background-color: khaki;
+  border: 1px solid black;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-bottom: 30px;
+}
 
 
 

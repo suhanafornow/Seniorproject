@@ -23,7 +23,12 @@ function Newsletter(id){
             const filteredData = randVar.docs.map((doc) => ({
                 doc, ...doc.data()
               }));
+            for(let i =0; i < filteredData.length; i++){
+                filteredData[i].timestamp= filteredData[i].timestamp.toDate().toDateString();
+            }
             setPosts(filteredData)
+
+            // console.log(filteredData[0].timestamp.toDate().toDateString())
             
         }
         getPosts();
@@ -56,35 +61,35 @@ function Newsletter(id){
                         <Blog title={post.title} author={post.question} timestamp={post.timestamp} response={post.answers}/>
                     ))
                 }
-               
+                <Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>
+                          
             </div>
         </div>
-    <Grid one = {<Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>} />
+        
+    {/* <Grid one = {<Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>} /> */}
+    <div id="aroundInput">
+        <div id="secInput">
+
     <h1> Question Responses! </h1>  
         
-        <form>
+        <form id="formInput">
         <h4> Enter your name:</h4>    
-        <input value={inputs.name||""} onChange={handlechange} type="text" id="name" name="name"/>	
+        <input value={inputs.name||""} onChange={handlechange} type="text" class="newsInput" name="name"/>	
         <br/>
         <h4> Enter your email:</h4>   
-        <input value={inputs.email||""} onChange={handlechange} type="text" id="email" name="email"/>
+        <input value={inputs.email||""} onChange={handlechange} type="text" class="newsInput" name="email"/>
         <br/>
         <h4> Enter your response:</h4>   
-        <textarea value={inputs.response||""} onChange={handlechange} type="text" id="response" name="response"/>
+        <textarea value={inputs.response||""} onChange={handlechange} type="text" class="newsInput" name="response"/>
         <br/>
         <br/>
-        <input onClick= {handlesubmit} type="submit" value="submit"/>
+        <input onClick= {handlesubmit} type="submit" value="submit" id="newsButton"/>
         
 
         </form>
-    <div id="answerboxes">
-        
+        </div>
 
     </div>
-        
-
-        
-
 
     </div>
  )
