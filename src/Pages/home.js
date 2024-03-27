@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import '../App.css';
 
 
@@ -29,7 +30,7 @@ function home() {
             <div class= "reviews"> 
             <p> MentorMe has made me learn a lot about older life in NYC and i've recieved great advice from my senior buddy!</p>
             </div>
-            <button id="getstarted"> Get Started!</button>
+            <Link id= "getStartedlink" to="signup"> <button id="getstarted" > Get Started!</button> </Link>
 
             </div>
   

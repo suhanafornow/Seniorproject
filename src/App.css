@@ -43,6 +43,12 @@
 
 
 /* Home Page CSS */
+
+#getStartedlink{
+  color: white;
+  text-decoration: none;
+}
+
 #logout2{
   background-color: lightpink;
   border: none;
@@ -85,9 +91,11 @@ margin-bottom: 70px;
   margin-right: auto;
   margin-top: 70px;
   padding: 15px 15px 15px 15px;
-  border-radius: 10%;
+  border-radius: 12px;
   background-color:lightpink;
   font-size: large;
+  border: none;
+
 }
 
 #image{
@@ -288,6 +296,8 @@ margin-bottom: 70px;
 #blogresponsepage{
   width: 33%;
   border: 1px solid black;
+  display: inline-block;
+  margin-bottom: 10px;
 
 
 }
@@ -377,6 +387,10 @@ border: none;
 
 /* Login page */ 
 
+#subbutton{
+  margin-top: 10px;
+}
+
 #login{
   background-color: lightpink;
   border: none;
@@ -391,6 +405,9 @@ border: none;
   width: 50%;
   text-align: center;
   background-color: lightpink;
+  border-radius: 12px;
+
+
 
 }
 #loginimage{
@@ -407,6 +424,7 @@ border: none;
 #second{
   margin-top: 34%;
   margin-bottom: 34%;
+
 }
 
 #loginpage{
@@ -416,8 +434,36 @@ border: none;
 
 }
 
+#email{
+  border-radius: 5px;
+  border: none;
+}
+
+#password{
+  border-radius: 5px;
+  border: none;
+
+}
+#name{
+  border-radius: 5px;
+  border: none;
+}
+#grade{
+  border-radius: 5px;
+  border: none;
+}
+#school{
+  border-radius: 5px;
+  border: none;
+}
+#region{
+  border-radius: 5px;
+  border: none;
+}
+
 /* User profile*/
 #userinfo{
+  background-color: lightpink;
   padding-left: 20px;
   padding-bottom: 20px;
 }
@@ -430,7 +476,9 @@ border: none;
 } */
 
 .boxS{
-  border: 1px solid green; 
+  padding: 2px;
+
+  border: 1px solid black; 
 
 }
 

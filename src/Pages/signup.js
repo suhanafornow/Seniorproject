@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css';
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../firebaseconfig";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,16 @@ import { doc, setDoc } from "firebase/firestore";
 
     
 function Signup(){
+    const {user, setUser} = useContext(UserContext)
+    const navigate = useNavigate();
+    useEffect(()=> {
+        if (user != null){
+            navigate("/userprofile")
+        }
+    });
+
+    console.log(user != null);
+    
     async function createuser(id){
         await setDoc(doc(db, "Volunteers", id), {
             name: inputs.name,
@@ -24,8 +34,7 @@ function Signup(){
         
           });
     }
-    const {user, setUser} = useContext(UserContext)
-    const navigate = useNavigate();
+    
     const [inputs, setInputs] = useState({})
     const handlechange = (event)=> {
         const name = event.target.name
@@ -78,7 +87,7 @@ if (user){
                     <h2> Region: </h2>
                     <input value={inputs.region||""} onChange={handlechange}type="text" id="region" name="region"/>
 <br/>
-                    <input onClick= {handlesubmit} type="submit" value="submit"/>	
+                    <input onClick= {handlesubmit} type="submit" value="submit" id="subbutton"/>	
                 </form>
             </div>
             </div>

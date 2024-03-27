@@ -49,13 +49,19 @@ function Newsletter(id){
         console.log(inputs);
         // const auth= auth;
         responses()
+
+        document.getElementsByClassName("newsInput")[0].value = ""
+        document.getElementsByClassName("newsInput")[1].value = ""
+        document.getElementsByClassName("newsInput")[2].value = ""
+
+
         
 }
 
  return (
     <div id="blogform">
         <div>
-            <div class="blogpost">
+            {/* <div class="blogpost"> */}
                 {
                     posts.map((post)=>(
                         <Blog title={post.title} author={post.question} timestamp={post.timestamp} response={post.answers}/>
@@ -63,7 +69,7 @@ function Newsletter(id){
                 }
                 <Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>
                           
-            </div>
+            {/* </dviv> */}
         </div>
         
     {/* <Grid one = {<Blog title="Title filler" author="Author filler" timestamp="timestamp filler" response="response filler"/>} /> */}

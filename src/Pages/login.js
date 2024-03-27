@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css';
-import { useState, useContext} from "react";
+import { useState, useContext, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { UserContext } from "../Context/usercontext";
@@ -15,6 +15,11 @@ function Login(){
         const value = event.target.value
         setInputs (values =>({...values, [name]:value}) )
     }
+    useEffect(()=> {
+        if (user != null){
+            navigate("/userprofile")
+        }
+    });
     const handlesubmit = (event)=> {
         event.preventDefault();
         const auth=getAuth();

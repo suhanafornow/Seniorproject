@@ -2,18 +2,24 @@ import React from "react";
 import { doc, getDoc } from "firebase/firestore";
 import {db} from "../firebaseconfig"
 import {UserContext } from "../Context/usercontext";
+import { useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import '../App.css';
 
 
 
 function Userprofile(){
-    const { user } = useContext(UserContext);
+    const {user, setUser} = useContext(UserContext)
+    const navigate = useNavigate();
     console.log(user)
     const [inputs, setInputs] = useState({});
-
+    useEffect(()=> {
+        if (user == null){
+            navigate("/")
+        }
+    });
     async function Store(){
-
+  
     console.log(user.uid)
     const docRef = doc(db, "Volunteers", user.uid);
     const docSnap = await getDoc(docRef);
@@ -50,12 +56,12 @@ function showLog() {
     <div id="userinfo">
     <h1> Profile Setting </h1>
     <div class="namebox">
-    <h3> Name: {inputs.name}  </h3>
+    <h3> Name: <span class= "boxS">{inputs.name}</span>  </h3>
     <h2> </h2>
     </div>
 
     <div class="namebox">
-    <h3> Email: {inputs.email} </h3>
+    <h3> Email: <span class= "boxS">{inputs.email}</span> </h3>
 
     <h2> </h2>
     </div>
